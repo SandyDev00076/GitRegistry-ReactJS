@@ -53,9 +53,16 @@
 }
 
 .imagegit {
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #fff;
     width: 150px;
     height: 150px;
+    transition-property: box-shadow;
+    transition-duration: 1s;
+}
+
+.imagegit:hover {
+    box-shadow: 0 0 15px #fff;
 }
 
 @font-face {

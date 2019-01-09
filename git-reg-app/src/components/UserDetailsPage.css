@@ -1,0 +1,27 @@
+@font-face {
+    font-family: aaramfont;
+    src: url(../assets/fonts/gidolinya.woff);
+}
+
+.detailcontainer {
+    display: flex;
+    padding: 30px;
+    align-items: center;
+}
+
+.userpic {
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0 #111;
+    width: 300px;
+    height: 300px;
+}
+
+.textdetails {
+    display: block;
+    font-family: aaramfont;
+}
+
+.userdet {
+    font-family: aaramfont;
+    font-size: 40px;
+}

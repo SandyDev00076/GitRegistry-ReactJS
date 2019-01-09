@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import './UserEntryPage.css';
 
 class UserEntry extends Component {
@@ -16,17 +17,21 @@ class UserEntry extends Component {
                 <br/>
                 <span className="intro2">Please enter your Git username.</span>
                 <br/>
-                <input style={{ marginTop: "10px", marginBottom: "10px" }} spellCheck="false" className="userinput" placeholder="Enter Username"/>
+                <input onChange={evt => this.userNameChanged(evt)} style={{ marginTop: "10px", marginBottom: "10px" }} spellCheck="false" className="userinput" placeholder="Enter Username"/>
                 <br/>
-                <button style={{ fontSize: "30px", letterSpacing: "8px", textAlign: "center", fontFamily: "aaramfont" }} className="btn btn-outline-warning mt-5 mr-5 ml-5 mb-2">Fetch Details</button>
+                <NavLink to={{ pathname: "/users/" + this.state.username, state: { 'user': this.state.username}}}>
+                    <button style={{ fontSize: "30px", letterSpacing: "8px", textAlign: "center", fontFamily: "aaramfont" }} className="btn btn-outline-warning mt-5 mr-5 ml-5 mb-2">Fetch Details</button>
+                </NavLink>
                 <br/>
                 <span className="bottomtip">And we will get everything ready for you!</span>
             </div>
         </React.Fragment>);
     }
-    usernameChanged = (evt) => {
+    userNameChanged = (evt) => {
         const username = evt.target.value;
-        this.setState({ username });
+        this.setState({ username }, () => {
+            console.log(this.state.username);
+        });
     }
 }
  
