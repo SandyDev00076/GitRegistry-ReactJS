@@ -1,0 +1,64 @@
+.container {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #282c34;
+    padding: 20px;
+}
+
+.intro1 {
+    font-size: 40px;
+    color: rgb(214, 250, 56);
+    font-family: aaramfont;
+}
+
+.intro2 {
+    font-size: 30px;
+    color: rgb(228, 245, 78);
+    font-family: aaramfont;
+}
+
+.userinput {
+    border-radius: 20px;
+    font-size: 60px;
+    background: #282c34;
+    color: rgb(214, 250, 56);
+    word-spacing: 5px;
+    padding: 10px;
+    letter-spacing: 8px;
+    border-color: rgb(226, 250, 121);
+    border-width: 5px;
+    font-family: aaramfont;
+    box-shadow: 0px 4px 1px 0px black;
+}
+
+.userinput:focus {
+    outline: none;
+}
+
+.bottomtip {
+    color: rgb(226, 250, 121);
+    font-size: 20px;
+    font-family: aaramfont;
+}
+
+.gitreg {
+    color: rgb(179, 38, 38);
+    transition-property: text-shadow, color;
+    transition-duration: 1s;
+}
+
+.gitreg:hover {
+    color: white; text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.imagegit {
+    border-radius: 5px;
+    width: 150px;
+    height: 150px;
+}
+
+@font-face {
+    font-family: aaramfont;
+    src: url(../assets/fonts/gidolinya.woff);
+}
