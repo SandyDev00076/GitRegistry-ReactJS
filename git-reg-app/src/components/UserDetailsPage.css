@@ -16,6 +16,13 @@
     height: 300px;
 }
 
+.userbio {
+    font-family: aaramfont;
+    font-size: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
 .textdetails {
     display: block;
     font-family: aaramfont;
@@ -24,4 +31,18 @@
 .userdet {
     font-family: aaramfont;
     font-size: 40px;
+}
+
+.userrepos {
+    font-size: 100px;
+    font-family: aaramfont;
+}
+
+.repoItem {
+    padding-left: 5px;
+    padding-right: 5px;
+    border-left-style: solid;
+    border-left-color: rgb(236, 227, 227);
+    border-left-width: 5px;
+    margin-bottom: 6px;
 }
