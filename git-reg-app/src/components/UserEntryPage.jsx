@@ -15,7 +15,7 @@ class UserEntry extends Component {
                 <span className="intro1">Welcome to the <span className="gitreg">Git Registry</span>.</span>
                 <br/>
                 <br/>
-                <span className="intro2">Please enter your Git username.</span>
+                <span className="intro2">Please enter a Git username.</span>
                 <br/>
                 <input onChange={evt => this.userNameChanged(evt)} style={{ marginTop: "10px", marginBottom: "10px" }} spellCheck="false" className="userinput" placeholder="Enter Username"/>
                 <br/>

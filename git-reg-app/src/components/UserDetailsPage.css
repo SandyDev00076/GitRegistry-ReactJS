@@ -7,6 +7,7 @@
     display: flex;
     padding: 30px;
     align-items: center;
+    color: rgb(81, 114, 114);
 }
 
 .userpic {
@@ -14,6 +15,29 @@
     box-shadow: 0 0 20px 0 #111;
     width: 300px;
     height: 300px;
+    transition-property: box-shadow;
+    transition-duration: 0.5s;
+}
+
+.userpic:hover {
+    box-shadow: 0 0 40px 0 #111;
+}
+
+.userfooter {
+    box-shadow: 0 0 5px grey;
+    width: 300px;
+    padding: 20px;
+    margin-top: 15px;
+    animation-name: entryAnimationDown;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    transition-property: box-shadow;
+    transition-duration: 0.25s;
+}
+
+.userfooter:hover {
+    box-shadow: 0 0 15px grey;
 }
 
 .userbio {
@@ -26,6 +50,67 @@
 .textdetails {
     display: block;
     font-family: aaramfont;
+}
+
+.repos {
+    box-shadow: 0 0 5px grey;
+    margin-left: 30px;
+    padding: 20px;
+    animation-name: entryAnimation;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    transition-property: box-shadow;
+    transition-duration: 0.25s;
+}
+
+.repos:hover {
+    box-shadow: 0 0 15px grey;
+}
+
+.userdetails {
+    box-shadow: 0 0 5px grey;
+    margin-left: 30px;
+    padding: 20px;
+    animation-name: entryAnimation;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    transition-property: box-shadow;
+    transition-duration: 0.25s;
+}
+
+.userdetails:hover {
+    box-shadow: 0 0 15px grey;
+}
+
+.publicrepos {
+    text-align: center;
+    margin-left: 30px;
+    padding: 20px;
+    box-shadow: 0 0 5px grey;
+    animation-name: entryAnimation;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    transition-property: box-shadow;
+    transition-duration: 0.25s;
+}
+
+.publicrepos:hover {
+    box-shadow: 0 0 15px grey;
+}
+
+@keyframes entryAnimation {
+    0% { opacity: 0; transform: translate(-40px) }
+    50% { opacity: 0.5; transform: translate(-20px) }
+    100% { opacity: 1; transform: translate(0px) }
+}
+
+@keyframes entryAnimationDown {
+    0% { opacity: 0; transform: translateY(-30px) }
+    50% { opacity: 0.5; transform: translateY(-15px) }
+    100% { opacity: 1; transform: translateY(0px) }
 }
 
 .userdet {
@@ -45,4 +130,10 @@
     border-left-color: rgb(236, 227, 227);
     border-left-width: 5px;
     margin-bottom: 6px;
+    min-width: 250px;
+}
+
+.repoItem:hover {
+    background-color: rgb(243, 236, 236);
+    border-radius: 0px 10px 10px 0px;
 }
