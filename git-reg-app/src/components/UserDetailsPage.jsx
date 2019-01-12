@@ -4,6 +4,7 @@ import './UserDetailsPage.css';
 
 class UserDetails extends Component {
     state = {
+        user_available: false,
         user_avatar: "",
         public_repos: 0,
         user_url: "",
@@ -29,6 +30,7 @@ class UserDetails extends Component {
             <nav className="navbar navbar-light bg-light">
                 <a href={this.state.user_url} className="navbar-brand" style={{ fontFamily: "aaramfont" }}><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="githublogo" style={{ width: "50px", height: "50px" }}/> / {this.props.location.state.user}</a>
             </nav>
+            {(this.state.user_available) ? 
             <div className="detailcontainer">
                 <div>
                     <a href={this.state.user_url}><img src={this.state.user_avatar} alt="No Profile Photo" className="userpic"/></a>
@@ -87,7 +89,13 @@ class UserDetails extends Component {
                         <span className="userdet" style={{ fontSize: "20px" }}>{(this.state.user_createdat) ? createdat.split('T')[0] : <span className="userdet" style={{ color: "red" }}>-NA-</span>}</span>
                     </div>
                 </div>
-            </div>
+                </div> : 
+                <div className="errorcontainer">
+                    <span style={{ fontSize: "60px", color: "orangered", fontWeight: "bold", fontFamily: "aaramfont" }}>404</span>
+                    <br/>
+                    <span style={{ fontSize: "50px", fontFamily: "aaramfont" }}>Oops! User can't be found!</span>
+                </div>
+            }
         </React.Fragment>);
     }
     componentWillMount() {
@@ -106,14 +114,19 @@ class UserDetails extends Component {
                 user_updatedat: res.data.updated_at,
                 user_type: res.data.type }, () => {
                 console.log('User Name - ' + this.state.user_name);
+                this.setState({ user_available: true });
 
                 // fetch the repos of the user
                 axios.get(res.data.repos_url).then(resp => {
-                    this.setState({ repos: resp.data }, () => {
-                        console.log(this.state.repos);
-                    });
+                    this.setState({ repos: resp.data });
+                }, reason => {
+                    console.log(reason);
                 });
             });
+        }, (reason) => {
+            console.log(reason);
+        }).catch((error) => {
+            console.log(error);
         });
     }
 }
