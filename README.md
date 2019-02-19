@@ -11,5 +11,8 @@ Enter your GitHub ID, then click on 'Fetch Details' and viola!
 4. Run **npm install**.
 5. Run **npm start**.
 
+Netlify Domain Link : https://jovial-tesla-1468ef.netlify.com
+Shortened Bit.ly : https://bit.ly/2IpLUYp 
+
 Used ReactJS for better development speeds, better performance and high code maintainability.
 Happy Coding!
