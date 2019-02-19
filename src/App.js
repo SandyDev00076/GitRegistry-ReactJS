@@ -9,8 +9,8 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={UserEntry}/>
-          <Route path="/users/:handle" component={UserDetails}/>
+          <Route exact path={`${process.env.PUBLIC_URL}/`} component={UserEntry}/>
+          <Route path={`${process.env.PUBLIC_URL}/users/:handle`} component={UserDetails}/>
         </Switch>
       </BrowserRouter>
     );

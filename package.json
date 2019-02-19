@@ -2,7 +2,7 @@
   "name": "git-reg-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://SandyDev00076.github.io/GitRegistry-ReactJS",
+  "homepage": "./",
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.2.1",
